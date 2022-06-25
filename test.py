@@ -14,7 +14,7 @@ upper = np.array([255, 255, 255])
 thresh = cv2.inRange(img, lower, upper)
 
 # apply morphology
-kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5,5))
+kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (1,1))
 morph = cv2.morphologyEx(thresh, cv2.MORPH_CLOSE, kernel)
 
 # invert morp image
