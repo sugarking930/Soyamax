@@ -2,12 +2,12 @@ import cv2
 import numpy as np
 
 # Read image
-img = cv2.imread('/Users/taisho/Desktop/7924.png')
+img = cv2.imread('/Users/taisho/Desktop/8099.png')
 hh, ww = img.shape[:2]
 
 # threshold on white
 # Define lower and uppper limits
-lower = np.array([50, 50, 50])
+lower = np.array([90, 90, 90])
 upper = np.array([255, 255, 255])
 
 # Create mask to only select black
