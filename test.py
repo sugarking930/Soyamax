@@ -2,8 +2,11 @@ import cv2
 import numpy as np
 
 # Read image
-img = cv2.imread('/Users/taisho/Desktop/8099.png')
-hh, ww = img.shape[:2]
+path_name = '/Users/taisho/Desktop/Soyamax/'
+file_name = '101.jpg'
+img = cv2.imread(path_name + file_name)
+cv2.imshow("image", img)
+hh,ww = img.shape[:2]
 
 # threshold on white
 # Define lower and uppper limits
@@ -24,11 +27,14 @@ mask = 255 - morph
 result = cv2.bitwise_and(img, img, mask=mask)
 
 
+
 # save results
-cv2.imwrite('pills_thresh.jpg', thresh)
-cv2.imwrite('pills_morph.jpg', morph)
-cv2.imwrite('pills_mask.jpg', mask)
-cv2.imwrite('pills_result.jpg', result)
+cv2.imshow("img", img)
+cv2.imwrite(('/Users/taisho/Desktop/Soyamax/'+ str(file_name) +'thresh.png'), thresh)
+cv2.imwrite(('/Users/taisho/Desktop/Soyamax/' + file_name+'pills_morph.png'), morph)
+cv2.imwrite('/Users/taisho/Desktop/Soyamax/pills_mask.png', mask)
+cv2.imwrite('/Users/taisho/Desktop/Soyamax/pills_result.png', result)
+print("???")
 
 cv2.imshow('thresh', thresh)
 cv2.imshow('morph', morph)
