@@ -1,3 +1,11 @@
+'''
+import cv2.pyファイルは　Into_Gray_scale.pyに移行されました
+今後の活躍にご期待ください
+
+'''
+
+
+
 import cv2
 import numpy as np
 

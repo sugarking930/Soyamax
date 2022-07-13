@@ -1,3 +1,13 @@
+
+'''
+
+trans_a.pyはTransparent.pyへ移行されました。
+今後の活躍にご期待ください
+
+
+'''
+
+
 from PIL import Image
   
 def convertImage():

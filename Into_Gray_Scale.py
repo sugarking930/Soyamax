@@ -27,9 +27,9 @@ def IntoGray(input_file: str):
 
 
     # save results
-    cv2.imshow("img", img)
-    cv2.imwrite(('/Users/taisho/Desktop/Soyamax/Res/' + str(input_file) +'thresh.png'), thresh)
-    cv2.imwrite(('/Users/taisho/Desktop/Soyamax/Res/' + str(input_file)+'morph.png'), morph)
+    # cv2.imshow("img", img)
+    cv2.imwrite(('/Users/taisho/Desktop/Soyamax/Res/thresh_fresh.png'), thresh)
+    cv2.imwrite(('/Users/taisho/Desktop/Soyamax/Res/' + str(input_file) +'morph.png'), morph)
     # cv2.imwrite('/Users/taisho/Desktop/Soyamax/pills_mask.png', mask)
     # cv2.imwrite('/Users/taisho/Desktop/Soyamax/pills_result.png', result)
     print("otuotuotuoutotuototuoutuotuotuotuotuotuotuotuotuot")

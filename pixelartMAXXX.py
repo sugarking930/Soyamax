@@ -25,7 +25,7 @@ def convertImage(img):
 
 
 # Input image
-input = cv2.imread('/Users/taisho/Desktop/Soyamax/TW_FN200/IMG_8095.png')
+input = cv2.imread('/Users/taisho/Desktop/Soyamax/TW_FN200/林.png')
 
 # Get input size
 height, width = input.shape[:2]
@@ -41,9 +41,11 @@ output = cv2.resize(temp, (width, height), interpolation=cv2.INTER_NEAREST)
 
 
 
+
+
 cv2.imshow('Input', input)
 cv2.imshow('Output', output)
-cv2.imwrite('/Users/taisho/Desktop/Soyamax/cheng.png', output)
+cv2.imwrite('/Users/taisho/Desktop/Soyamax/process/cheng.png', output)
 img = '/Users/taisho/Desktop/Soyamax/cheng.png'
 convertImage(img)
 cv2.waitKey(0)
