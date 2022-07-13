@@ -1,7 +1,7 @@
 from PIL import Image
   
-def convertImage(input_file: str):
-    img = Image.open(input_file)
+def convertImage(input_res_dir: str, input_res_file: str):
+    img = Image.open((input_res_dir + input_res_file))
     img = img.convert("RGBA")
   
     datas = img.getdata()
@@ -17,7 +17,7 @@ def convertImage(input_file: str):
             # print(item)
   
     img.putdata(newData)
-    img.save("/Users/taisho/Desktop/Soyamax/Res/"+ str(input_file) +".png", "PNG")
+    img.save(str(input_res_dir + '/Final_Res/' + input_res_file) + ".png", "PNG")
     print("Successful")
 
   

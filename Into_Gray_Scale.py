@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
 
-def IntoGray(input_file: str):
+def IntoGray(input_dir: str, input_file: str):
     # Read image
-    img = cv2.imread(input_file)
-    cv2.imshow("image", img)
+    img = cv2.imread(input_dir + "/" + input_file)
+    # cv2.imshow("image", img)
     hh,ww = img.shape[:2]
 
     # threshold on white
@@ -28,8 +28,11 @@ def IntoGray(input_file: str):
 
     # save results
     # cv2.imshow("img", img)
-    cv2.imwrite(('/Users/taisho/Desktop/Soyamax/Res/thresh_fresh.png'), thresh)
-    cv2.imwrite(('/Users/taisho/Desktop/Soyamax/Res/' + str(input_file) +'morph.png'), morph)
+
+    out_str = (input_dir+ '/Res/'+input_file + 'thresh.png')
+    print("Out_str:", out_str)
+    cv2.imwrite(out_str, thresh)
+    cv2.imwrite(('/Users/taisho/Desktop/Soyamax/Res/' + input_file +'morph.png'), morph)
     # cv2.imwrite('/Users/taisho/Desktop/Soyamax/pills_mask.png', mask)
     # cv2.imwrite('/Users/taisho/Desktop/Soyamax/pills_result.png', result)
     print("otuotuotuoutotuototuoutuotuotuotuotuotuotuotuotuot")
